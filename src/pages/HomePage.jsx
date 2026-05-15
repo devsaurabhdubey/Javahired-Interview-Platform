@@ -178,60 +178,189 @@ const HomePage = () => {
         </div>
 
         {/* Company Cards */}
-        <div className="mt-28">
+       {/* Featured Company Cards */}
+<div className="mt-28">
 
-          <div className="text-center">
+  <div className="text-center">
 
-            <h2 className="text-5xl font-black text-slate-900">
-              Prepare For Top Companies
-            </h2>
+    <h2 className="text-5xl font-black text-slate-900">
+      Prepare For Top Companies
+    </h2>
 
-            <p className="mt-5 text-xl text-slate-600">
-              Real interview patterns. Real preparation roadmap.
-            </p>
+    <p className="mt-5 text-xl text-slate-600">
+      Company-specific interview preparation roadmaps powered by AI.
+    </p>
 
-          </div>
+  </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-16">
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-16">
 
-            {companies.map((company) => (
-              <div
-                key={company.name}
-                className={`group relative overflow-hidden bg-gradient-to-br ${company.color} rounded-[32px] p-8 text-white shadow-2xl ${company.glow} hover:-translate-y-3 hover:rotate-1 transition duration-500 cursor-pointer`}
-              >
+    {/* Mphasis */}
+    <div className="group relative overflow-hidden rounded-[32px] bg-gradient-to-br from-purple-700 to-indigo-600 p-8 text-white shadow-2xl hover:-translate-y-3 transition duration-500">
 
-                {/* Shine Effect */}
-                <div className="absolute top-0 left-[-100%] w-full h-full bg-white/20 skew-x-12 group-hover:left-[200%] transition-all duration-1000"></div>
+      <div className="bg-white rounded-2xl p-4 w-fit">
+        <img
+          src="https://companieslogo.com/img/orig/MPHASIS.NS_BIG-76fdbb6a.png?t=1720244492"
+          alt="Mphasis"
+          className="h-10 object-contain"
+        />
+      </div>
 
-                {/* Logo */}
-                <div className="bg-white rounded-2xl p-4 w-fit shadow-lg">
-                  <img
-                    src={company.logo}
-                    alt={company.name}
-                    className="h-10 object-contain"
-                  />
-                </div>
+      <h3 className="mt-8 text-4xl font-black">
+        Mphasis
+      </h3>
 
-                <h3 className="mt-8 text-4xl font-black tracking-tight">
-                  {company.name}
-                </h3>
+      <p className="mt-4 text-lg leading-relaxed opacity-90">
+        Java backend, Spring Boot, banking domain,
+        SQL & microservices interview preparation.
+      </p>
 
-                <p className="mt-4 text-lg opacity-90 leading-relaxed">
-                  Java + Spring Boot + System Design
-                  interview preparation roadmap.
-                </p>
+      <button className="mt-10 bg-white text-slate-900 px-6 py-4 rounded-2xl font-bold">
+        Explore Questions →
+      </button>
 
-                <button className="mt-10 bg-white text-slate-900 px-6 py-4 rounded-2xl font-bold hover:scale-105 transition">
-                  Start Preparing →
-                </button>
+    </div>
 
-              </div>
-            ))}
+    {/* JPMorgan */}
+    <div className="group relative overflow-hidden rounded-[32px] bg-gradient-to-br from-slate-900 to-slate-700 p-8 text-white shadow-2xl hover:-translate-y-3 transition duration-500">
 
-          </div>
+      <div className="bg-white rounded-2xl p-4 w-fit">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/a/af/J_P_Morgan_Logo_2008_1.svg"
+          alt="JPMorgan"
+          className="h-10 object-contain"
+        />
+      </div>
 
+      <h3 className="mt-8 text-4xl font-black">
+        JPMorgan
+      </h3>
+
+      <p className="mt-4 text-lg leading-relaxed opacity-90">
+        Enterprise Java, multithreading,
+        low latency systems & fintech interviews.
+      </p>
+
+      <button className="mt-10 bg-white text-slate-900 px-6 py-4 rounded-2xl font-bold">
+        Explore Questions →
+      </button>
+
+    </div>
+
+    {/* Wells Fargo */}
+    <div className="group relative overflow-hidden rounded-[32px] bg-gradient-to-br from-red-700 to-yellow-600 p-8 text-white shadow-2xl hover:-translate-y-3 transition duration-500">
+
+      <div className="bg-white rounded-2xl p-4 w-fit">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Wells_Fargo_Bank.svg"
+          alt="Wells Fargo"
+          className="h-10 object-contain"
+        />
+      </div>
+
+      <h3 className="mt-8 text-4xl font-black">
+        Wells Fargo
+      </h3>
+
+      <p className="mt-4 text-lg leading-relaxed opacity-90">
+        Banking technology interviews,
+        APIs, Java backend & production support.
+      </p>
+
+      <button className="mt-10 bg-white text-slate-900 px-6 py-4 rounded-2xl font-bold">
+        Explore Questions →
+      </button>
+
+    </div>
+
+    {/* Deloitte */}
+    <div className="group relative overflow-hidden rounded-[32px] bg-gradient-to-br from-emerald-600 to-green-500 p-8 text-white shadow-2xl hover:-translate-y-3 transition duration-500">
+
+      <div className="bg-white rounded-2xl p-4 w-fit">
+        <img
+          src="https://1000logos.net/wp-content/uploads/2021/05/Deloitte-logo.png"
+          alt="Deloitte"
+          className="h-10 object-contain"
+        />
+      </div>
+
+      <h3 className="mt-8 text-4xl font-black">
+        Deloitte
+      </h3>
+
+      <p className="mt-4 text-lg leading-relaxed opacity-90">
+        Java full stack, consulting projects,
+        React + Spring Boot interview prep.
+      </p>
+
+      <button className="mt-10 bg-white text-slate-900 px-6 py-4 rounded-2xl font-bold">
+        Explore Questions →
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+{/* Moving Companies Strip */}
+<div className="mt-32">
+
+  <div className="text-center">
+
+    <h2 className="text-5xl font-black text-slate-900">
+      Companies Developers Prepare For
+    </h2>
+
+    <p className="mt-5 text-xl text-slate-600">
+      Curated interview preparation experiences from top companies.
+    </p>
+
+  </div>
+
+  <div className="relative overflow-hidden mt-16">
+
+    <div className="flex gap-16 animate-marquee whitespace-nowrap">
+
+      {[
+        "Google",
+        "Microsoft",
+        "Amazon",
+        "Oracle",
+        "Infosys",
+        "TCS",
+        "Wipro",
+        "Accenture",
+        "Capgemini",
+        "PayPal",
+        "Netflix",
+        "Uber",
+        "Adobe",
+        "Flipkart",
+        "Swiggy",
+        "Zomato",
+        "LinkedIn",
+        "Meta",
+        "Apple",
+        "IBM",
+        "Cisco",
+        "Goldman Sachs",
+        "Paytm",
+        "Intuit",
+      ].map((company) => (
+        <div
+          key={company}
+          className="bg-white border border-slate-200 shadow-lg px-8 py-5 rounded-2xl text-xl font-bold text-slate-700 hover:scale-105 transition"
+        >
+          {company}
         </div>
+      ))}
 
+    </div>
+
+  </div>
+
+</div>
       </section>
 
     </div>
