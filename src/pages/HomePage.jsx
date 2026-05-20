@@ -1,6 +1,19 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import StepwiseProgress from "../components/StepwiseProgress";
 import AnimatedLogo from "../components/AnimatedLogo";
+
+/* ── URL slug helpers ───────────────────────────────── */
+const toSlug = (str = "") =>
+  str.toLowerCase().trim().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
+const expSlug = (exp = "") => {
+  const map = {
+    "0\u20131 years (fresher)": "0-1", "1\u20133 years": "1-3",
+    "3\u20135 years": "3-5",           "5\u20138 years": "5-8",
+    "8+ years (senior)": "8-plus",
+  };
+  return map[exp.toLowerCase()] || toSlug(exp);
+};
 
 /* ─── Data ──────────────────────────────────────────── */
 const COMPANIES = [
@@ -407,6 +420,10 @@ export default function HomePage() {
 
               {/* CTA */}
               <button className="btn-crack" disabled={!canGo}
+                onClick={() => {
+                  if (!canGo) return;
+                  navigate(`/interview/${toSlug(company)}/${toSlug(role)}/${expSlug(exp)}`);
+                }}
                 style={{ width:"100%", padding:isMobile?"16px":"20px", borderRadius:16, fontSize:isMobile?15:18 }}>
                 <span style={{ display:"flex", alignItems:"center", justifyContent:"center", gap:10 }}>
                   <span>⚡</span>
