@@ -258,6 +258,7 @@ export default function HomePage() {
     }, 50);
   }, []);
 
+  const navigate = useNavigate();
   const canGo = company !== "Select Company" && exp !== "Select Experience" && role !== "Select Role";
   const d = (s) => ({ animationDelay:`${s}s` });
 
